@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>客户端与服务器交互</title>
+</head>
+
+<body>
+    <script src="./js/jquery.js"></script>
+    <script>
+        var infor = '==='
+        $.ajax({
+            url: 'http://localhost:80/admin/data',
+            success: function(data) {
+                infor = data
+                console.log(infor);
+            }
+        });
+    </script>
+</body>
+
+</html>
